@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JUST 쇼핑몰</title>
+    <link rel="stylesheet" href="css/main.css">
+    <script src="script/jquery-1.12.4.min.js"></script>
+    <script src="script/main.js"></script>
+</head>
+
+<body>
+    <div id="wrap">
+        <header id="header">
+            <h1 class="logo"><a href="#"><img src="images/logo.png" alt="logo_top"></a></h1>
+            <nav class="nav">
+                <ul class="main">
+                    <!-- ul은 li만 품음. li뒤에 sub오지 않음.
+                    li태그 끝나기 전 안에 sub ul태그 걸어주기 -->
+                    <li>
+                        <a href="#">탑</a>
+                        <ul class="sub">
+                            <li><a href="#">블라우스</a></li>
+                            <li><a href="#">티</a></li>
+                            <li><a href="#">셔츠</a></li>
+                            <li><a href="#">니트</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">아우터</a>
+                        <ul class="sub">
+                            <li><a href="#">자켓</a></li>
+                            <li><a href="#">코트</a></li>
+                            <li><a href="#">가디건</a></li>
+                            <li><a href="#">머플러</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">팬츠</a>
+                        <ul class="sub">
+                            <li><a href="#">청바지</a></li>
+                            <li><a href="#">짧은바지</a></li>
+                            <li><a href="#">긴바지</a></li>
+                            <li><a href="#">레깅스</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">악세서리</a>
+                        <ul class="sub">
+                            <li><a href="#">귀고리</a></li>
+                            <li><a href="#">목걸이</a></li>
+                            <li><a href="#">반지</a></li>
+                            <li><a href="#">팔찌</a></li>
+                        </ul>
+                    </li>
+                </ul> <!-- main -->
+            </nav> <!-- nav -->
+        </header> <!-- header -->
+        <section id="section">
+            <div class="slide_img">
+                <!-- 'slide_img'가 보여지는 영역임 -->
+                <ul class="move">
+                    <!-- ul 이 움직이는 영역임 -->
+                    <li><a href="#"><img src="images/land1.jpg" alt="land1"></a></li>
+                    <li><a href="#"><img src="images/land2.jpg" alt="land2"></a></li>
+                    <li><a href="#"><img src="images/land3.jpg" alt="land3"></a></li>
+                    <!-- 이미지는 인라인구조라 5px가 뜬다. -->
+
+                </ul> <!-- move -->
+
+            </div> <!-- slide_img -->
+            <div class="container">
+                <div class="noti_gall">
+                    <div class="notice">
+                        <h2>공지사항</h2>
+                        <ul>
+                            <li>
+                                <a href="#">깔끔한 비즈니스 캐쥬얼 룩!(팝업)</a>
+                                <span>2019.03.18</span>
+                            </li>
+                            <li>
+                                <a href="#">봄시즌 머스트해브아이템</a>
+                                <span>2019.03.17</span>
+                            </li>
+                            <li>
+                                <a href="#">테이트갤러리아백화점 수원점</a>
+                                <span> 2019.03.17</span>
+                            </li>
+                            <li>
+                                <a href="#">그린 컬러 봄 맞이해 보아요</a>
+                                <span>2019.03.17</span>
+                            </li>
+                        </ul>
+                    </div> <!-- notice -->
+                    <div class="gallery">
+                        <h2 class="off">갤러리</h2>
+                        <ul>
+                            <li><a href="#"><img src="images/thumb1.png" alt="thumb1"></a></li>
+                            <li><a href="#"><img src="images/thumb2.png" alt="thumb2"></a></li>
+                            <li><a href="#"><img src="images/thumb3.png" alt="thumb3"></a></li>
+                        </ul>
+                    </div> <!-- gallery -->
+                </div><!-- noti_gall -->
+                <div class="banner">
+                    <h2>배너</h2>
+                    <p><a href="#"><img src="images/banner.png" alt="banner"></a></p>
+                </div><!-- banner -->
+                <div class="baro">
+                    <h2>바로가기</h2>
+                    <p><a href="#"><img src="images/qlink.png" alt="qlink"></a></p>
+
+                </div> <!-- baro -->
+
+            </div> <!-- container -->
+        </section> <!-- section -->
+        <footer id="footer">
+            <div class="f_logo"><img src="images/logo_btm.png" alt="logo_btm"></div>
+            <div class="copy">copyright &copy; JUST Shoppingmall, All rights reserved. </div>
+
+            <div class="sns">
+                <a href="#"><img src="images/ico_in.png" alt="인스타"></a>
+                <a href="#"><img src="images/ico_tw.png" alt="트위터"></a>
+                <a href="#"><img src="images/ico_fb.png" alt="페이스북"></a>
+            </div>
+
+        </footer> <!-- footer -->
+    </div> <!-- wrap -->
+
+    <div class="pop">
+        <!-- 모달팝업 -->
+        <h3>pop title</h3>
+        <p>
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum nisi asperiores maxime corporis ipsam
+            maiores repudiandae cum voluptatum repellendus blanditiis, aliquid vel et odio quis ipsa assumenda atque ab!
+            Voluptates.
+        </p>
+        <button class="close">닫기(X)</button>
+    </div>
+</body>
+
+</html>

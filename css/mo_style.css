@@ -1,0 +1,61 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0; box-sizing: border-box;}
+
+#wrap{
+    width: 100%;
+    height: 100vh;
+    /* 100퍼로 쓰려면, 바디와 html태그에 높이가 100퍼로 걸려있어야.. */
+    background-color: #f1f1f1;
+    position: relative;
+}
+
+.mo_wrap{
+    width: 360px; height: 350px;
+    position: absolute;
+    left: 50%;
+    top: 200px;
+    transform: translateX(-50%);
+
+}
+
+
+.mo_wrap > img{}
+.box{
+    /* 744*421 : 모니터 안 크기 */
+    /* 144*254: 모바일 화면 안 크기 */
+    width: 144px;
+    height: 254px;
+    /* 2038(이미지포토샵에서 비율적인 높이)-420(목업이미지 세로) */
+    position: absolute;
+    
+    right: 10px;
+    top: 44px;
+    /* 이미지 포토샵에서 기기 이미지의 테두리 위 오른쪽 체크 후 입력 */
+    overflow: hidden;
+}
+
+.box img{
+    /* 모바일 페이지 이미지 */
+    width: 100%;
+    position: absolute;
+    /* 움직여야하므로 뜯어주기 */
+    left: 0;
+    top: 0;
+    cursor: pointer;
+}
+.box:hover img{
+    animation: ani01 10s 0.5s infinite ease-in-out;
+    /* 얼터네이트는 1번만 왔다갔다 */
+    /* 인피니트는 무한반복 */
+    /* 애니메이션효과는 알아서 응용 */
+}
+@keyframes ani01{
+    0%{top:0;}
+    50%{top:calc(-1824px + 257px)}
+    /* 포토샵:이미지>이미지사이즈>픽셀로 단위변경해서 확인 */
+    /* 1824px ???? */
+    100%{top: 0;}
+}
+/* mobile page 이미지: 360px*4623px */
+/* 그림이 내려가야 하므로 음수값으로-2038 올려주고 전부다 올라가는게 아니므로 +420px(모니터 안 높이) */

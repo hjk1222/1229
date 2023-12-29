@@ -1,0 +1,293 @@
+@charset "utf-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+a{text-decoration: none; color: inherit;}
+ul,ol,li{list-style: none;}
+
+body{
+    font-family: "돋움";
+    font-size: 14px;
+    color: #222328;
+    background: white;
+}
+
+#wrap{
+    width: 1200px;
+    margin: 0 auto;
+    /* height: 700px;  */
+}
+
+#header{
+    width: 100%;
+    height: 100px;
+    /* background-color: #f1f1f1; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo{
+    width: 200px;
+    height: 40px;
+}
+
+.nav{
+    
+}
+.main{}
+.main > li{
+    /* width: 1000px; */
+    float: left;
+    position: relative;
+}
+.main > li > a{
+    display: block;
+    width: 150px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    background-color: skyblue;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.main > li:hover > a{
+    /* sub에 글자를 호버하도 main li가 품는애들다 색상 바뀌도록 */
+    background-color: darkblue;
+    color: white;
+}
+
+/* 서브메뉴는 겹치기 때문에 포지션 뜯어야함 */
+.sub{
+    /* .main > li가 부모 */
+    position: absolute;
+    left: 0;
+    top: 50px;
+    border: 1px solid red;
+    width: 100%;
+    display: none;
+    z-index: 100;
+    /* 슬라이드이미지 요소의 포지션 뜯고 걔가 마지막 요소라 서브메뉴 보이도록 z-인덱스 걸어주기 */
+}
+.sub li{}
+
+.sub li a{
+    display: block;
+    background-color: darkcyan;
+    /* a태그에만 높이를 줌, 부모에게걸어서 높이는 제어하지마라, 자식만큼 알아서 가져감. */
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.sub li a:hover{
+    background-color: darkblue;
+    color: white;
+}
+
+
+#section{
+    /* b영역+c영역 */
+    width: 100%;
+    height: 500px;
+    /* background-color: #aaa */
+
+}
+#footer{
+    width: 100%;
+    height: 100px;
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+}
+.slide_img{
+    height: 300px;
+    position: relative;
+    /* move의 기준 */
+    overflow: hidden;
+    /* overflow:hidden ---> 여기가 보이는 영역이라, 안보이는건 사라지게 */
+}
+
+.move{
+    position: absolute;
+    /* 움직일 아이한테 꼭 포지션앱솔 걸어줘야 함 */
+    width: 1200px;
+    height: 900px;
+    /* 900 = img * 3 높이 */
+    top: 0; left: 0;
+}
+.move li{
+    width: 1200px;
+    height: 300px;    
+}
+.move li a{}
+.move li a img{}
+
+.container{
+    height: 200px;
+    display: flex;
+    justify-content: space-between;
+}
+.container > div{
+    /* 부등호 꼭! */
+    height: 200px;
+    /* width: 400px; 박스 사이 간격 위해 390px으로.*/
+    width: 390px;
+    /* border: 1px solid salmon; */
+    position: relative;
+}
+
+
+.container h2{
+    /* h2는 기본 블럭구조임 */
+    width: 100px;
+    height: 35px;
+    background-color: #fff;
+    font-size: 14px;
+    text-align: center;
+    line-height: 35px;
+
+    border: 1px solid salmon;
+    border-bottom-color: #fff;
+
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 101;
+
+    border-radius: 10px 10px 0 0;
+}
+
+/* 높이는 상속되지 않음 */
+.noti_gall{}
+.noti_gall ul{
+    position: absolute;
+    /* 겹침 */
+    top:34px;
+    left: 0;
+    height:166px;
+    width: 390px;
+    border: 1px solid salmon;
+    background-color: #fff;
+    border-radius: 0 10px 10px 10px;
+}
+.notice{}
+.notice ul{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* display: none; */
+}
+.notice ul li{
+    padding: 8px 0;
+    overflow: hidden;
+    border-bottom: 1px dotted #aaa;
+}
+.notice ul li a{
+    display: block;
+    width: 70%;
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    float: left;
+}
+.notice ul li span{
+    float: right;
+}
+
+.gallery{}
+.gallery ul{
+    display: none;
+    /* display: flex; */
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+.gallery ul li{
+
+
+}
+.gallery ul li a{}
+.gallery ul li a img{}
+
+.gallery h2{left: 100px;}
+.container h2.off{
+
+    background-color: #ddd;
+}
+
+.baro{}
+.banner p , .baro p{
+    width: 390px;
+    height: 166px;
+    /* 높이: 200-35(제목 높이)=165px */
+    /* border: 1px solid salmon; */
+    background-color: #fff;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+    /* justify-content,  align-items: 컨텐츠가 하나라서 모두 센터로 모이게 구조를.. */
+    position: absolute;
+    top: 34px;
+    left: 0;
+    border-radius: 0 10px 10px 10px;
+    border: 1px solid salmon;
+}
+
+
+/* 푸터영역 */
+.f_logo{
+    border-right: 1px solid #ddd;
+}
+.copy{}
+.sns{}
+.sns a{
+    padding-left: 10px;
+}
+
+.pop{
+   width: 500px;
+   height: 600px;
+   background: white;
+   border: 10px groove darkblue;
+   padding: 30px;
+   position: absolute;
+   left: 50%;
+   top: 50%;
+   transform: translate(-50%, -50%);
+   z-index: 300;
+   display: none;
+}
+
+.pop h3{
+    font-size: 20px;
+    line-height: 30px;
+    border-bottom: 1px dotted gray;
+    text-transform: capitalize;
+}
+.pop p{
+    padding-top: 20px;
+    line-height: 2;
+    text-align: justify;
+}
+.pop p::first-letter{
+    font-size: 20px;
+    color: darkblue;
+    font-weight: bold;
+}
+.pop .close{
+    position: absolute;
+    bottom:100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;    
+}
+
+
+

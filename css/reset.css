@@ -1,0 +1,25 @@
+@charset "uth-8";
+*{margin: 0; padding: 0; box-sizing: border-box;}
+ul,li,ol{list-style: none;}
+a{text-decoration: none; color: inherit;}
+
+.clear_fix::before,
+.clear_fix::after{
+    content: " ";
+    display: block;
+    clear: both;
+}
+/* 플롯 설정 시 따라 자식요소 따라 올라가지 않도록 */
+
+body{
+    font-family: "고딕";
+    font-size: 14px;
+    color: #444;
+}
+
+table{
+    border-collapse: collapse;
+}
+/* 테이블표 이중선 삭제 */
+
+img{vertical-align: bottom;}
