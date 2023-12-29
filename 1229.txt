@@ -8,3 +8,14 @@ cd 폴더명1 탭
 cd 폴더명2 탭
 cd 
 
+git init
+만들기
+git remote add origin https://github.com/hjk1222/1229.git
+
+ㅇ 파일명은 index.
+ㅇ 타이틀 꼭 넣어줘야함.
+ㅇ 오류검사 : https://validator.w3.org/
+ㅇ css 오류검사: https://jigsaw.w3.org/css-validator/validator.html.ko
+ㅇ git허브도 ui 활용해서 올리고 내리기 가능함 (배울 예정).
+
+

@@ -73,14 +73,10 @@ $(function(){
     
     //팝업
     $(".p_click").click(function(){
-        $(".pop").show();
+        $(".pop").show();    
     })//
-
     $(".close").click(function(){
         $(".pop").hide();
-    })
-    
-
-    
+    })    
 
 })//jquery
